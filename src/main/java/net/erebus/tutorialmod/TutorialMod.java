@@ -1,5 +1,6 @@
 package net.erebus.tutorialmod;
 
+import net.erebus.tutorialmod.block.ModBlocks;
 import net.erebus.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -14,5 +15,6 @@ public class TutorialMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
