@@ -1,7 +1,6 @@
 package net.erebus.tutorialmod.block;
 
 import net.erebus.tutorialmod.TutorialMod;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -23,6 +22,8 @@ public class ModBlocks {
     public static Block JAMIE_BLOCK = registerBlock("jamie_block", new Block(AbstractBlock.Settings.create().strength(0.1f)
             .sounds(BlockSoundGroup.WART_BLOCK)));
 
+    public static Block RICK_BLOCK = registerBlock("rick_block", new Block(AbstractBlock.Settings.create().strength(6f).sounds(BlockSoundGroup.HONEY)));
+
 private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, name), block);
@@ -40,6 +41,7 @@ private static Block registerBlock(String name, Block block){
         fabricItemGroupEntries.add(PINK_GARNET_BLOCK);
         fabricItemGroupEntries.add(RAW_PINK_GARNET_BLOCK);
         fabricItemGroupEntries.add(JAMIE_BLOCK);
+        fabricItemGroupEntries.add(RICK_BLOCK);
     });
     }
 

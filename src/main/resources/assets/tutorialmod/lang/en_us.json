@@ -2,7 +2,12 @@
   "block.tutorialmod.jamie_block": "Jamie",
   "block.tutorialmod.pink_garnet_block": "Block of Pink Garnet",
   "block.tutorialmod.raw_pink_garnet_block": "Block of Raw Pink Garnet",
+  "block.tutorialmod.rick_block": "Never going to give you up",
 
   "item.tutorialmod.pink_garnet": "Pink Garnet",
-  "item.tutorialmod.raw_pink_garnet": "Raw Pink Garnet"
+  "item.tutorialmod.raw_pink_garnet": "Raw Pink Garnet",
+
+  "itemgroup.tutorialmod.pink_garnet_items": "Pink Garnet Items",
+  "itemgroup.tutorialmod.pink_garnet_blocks": "Pink Garent Blocks",
+  "itemgroup.tutorialmod.fun_blocks_group" : "Fancy Blocks"
 }
