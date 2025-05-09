@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#":{
+      "item": "minecraft:diamond_block"
+    },
+    "X": {
+      "item": "minecraft:dirt"
+    }
+  },
+  "pattern": [
+    "   ",
+    "###",
+    "XXX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:rick_block"
+  }
+}
