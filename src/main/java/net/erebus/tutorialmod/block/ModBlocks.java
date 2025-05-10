@@ -1,6 +1,7 @@
 package net.erebus.tutorialmod.block;
 
 import net.erebus.tutorialmod.TutorialMod;
+import net.erebus.tutorialmod.block.custom.MagicBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -15,22 +16,26 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
-    public static Block PINK_GARNET_BLOCK = registerBlock("pink_garnet_block", new Block(AbstractBlock.Settings.create().strength(4f).requiresTool()
+    public static final Block PINK_GARNET_BLOCK = registerBlock("pink_garnet_block", new Block(AbstractBlock.Settings.create().strength(4f).requiresTool()
             .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
-    public static Block RAW_PINK_GARNET_BLOCK = registerBlock("raw_pink_garnet_block", new Block(AbstractBlock.Settings.create().strength(2f)
+    public static final Block RAW_PINK_GARNET_BLOCK = registerBlock("raw_pink_garnet_block", new Block(AbstractBlock.Settings.create().strength(2f)
             .requiresTool()));
 
-    public static Block PINK_GARNET_DEEPSLATE_ORE = registerBlock("pink_garnet_deepslate_ore",
+    public static final Block PINK_GARNET_DEEPSLATE_ORE = registerBlock("pink_garnet_deepslate_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3, 6), AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
-    public static Block PINK_GARNET_ORE = registerBlock("pink_garnet_ore",
+    public static final Block PINK_GARNET_ORE = registerBlock("pink_garnet_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.STONE)));
 
-    public static Block JAMIE_BLOCK = registerBlock("jamie_block", new Block(AbstractBlock.Settings.create().strength(0.1f)
-            .sounds(BlockSoundGroup.WART_BLOCK)));
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+            new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool()));
 
-    public static Block RICK_BLOCK = registerBlock("rick_block", new Block(AbstractBlock.Settings.create().strength(6f).sounds(BlockSoundGroup.HONEY)));
+    public static final Block JAMIE_BLOCK = registerBlock("jamie_block", new Block(AbstractBlock.Settings.create()
+            .sounds(BlockSoundGroup.WART_BLOCK).breakInstantly().jumpVelocityMultiplier(4f)));
+
+    public static final Block RICK_BLOCK = registerBlock("rick_block", new Block(AbstractBlock.Settings.create().strength(6f).sounds(BlockSoundGroup.HONEY)
+            .velocityMultiplier(2f)));
 
 private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

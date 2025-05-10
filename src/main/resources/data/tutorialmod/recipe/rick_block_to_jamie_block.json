@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "tutorialmod:rick_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:jamie_block"
+  }
+}
