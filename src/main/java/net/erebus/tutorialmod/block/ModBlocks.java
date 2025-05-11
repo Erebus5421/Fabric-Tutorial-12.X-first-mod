@@ -31,6 +31,9 @@ public class ModBlocks {
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",
             new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool()));
 
+    public static  final Block QUOKA = registerBlock("quoka", new ExperienceDroppingBlock(UniformIntProvider.create(5, 10), AbstractBlock.Settings
+            .create().strength(2f).sounds(BlockSoundGroup.WET_GRASS)));
+
     public static final Block JAMIE_BLOCK = registerBlock("jamie_block", new Block(AbstractBlock.Settings.create()
             .sounds(BlockSoundGroup.WART_BLOCK).breakInstantly().jumpVelocityMultiplier(4f)));
 
@@ -55,6 +58,7 @@ private static Block registerBlock(String name, Block block){
         fabricItemGroupEntries.add(RAW_PINK_GARNET_BLOCK);
         fabricItemGroupEntries.add(JAMIE_BLOCK);
         fabricItemGroupEntries.add(RICK_BLOCK);
+        fabricItemGroupEntries.add(QUOKA);
     });
     }
 
